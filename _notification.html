@@ -4,3 +4,34 @@
 {
     <h5>@TempData["suc"]</h5>
 }
+/=============================================================================================
+
+
+
+@if (TempData["suc"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> @*//tostr//*@
+   
+    <script type="text/javascript">
+        
+    toastr.success('@TempData["suc"]');
+    </script>
+
+}
+
+
+
+@if (TempData["del"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> @*//tostr//*@
+   
+    <script type="text/javascript">
+        
+   toastr.warning('@TempData["del"]')
+    </script>
+
+}
+
+
